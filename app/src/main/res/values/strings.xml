@@ -9,4 +9,24 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Flood</string>
+    <string name="first_aid">First Aid</string>
+    <string name="safety_tips">Safety Tips</string>
+    <string name="maps">Maps</string>
+    <string name="hotlines">Hotlines</string>
+    <!--Safety Tips Strings-->
+    <string name="SafetyTip_1">Ensure someone always knows where you are</string>
+    <string name="SafetyTip_2">Keep up with the news.</string>
+    <string name="SafetyTip_3">Unplug all unnecessary electrical outlets and appliances</string>
+    <string name="SafetyTip_4">Know how to shut down your electricity</string>
+    <string name="SafetyTip_5">Pack a backpack</string>
+    <string name="SafetyTip_6">Keep Calm and Prepare some floating devices.</string>
+    <string name="SafetyTip_7">Avoid running water and any flood water if you have to walk out of your home.</string>
+    <string name="SafetyTip_1_1">Text your parents, your loved ones or friends to let them know where you are and who you are with. Update each other consistently.</string>
+    <string name="SafetyTip_2_1">Tune in to the news on TV, radio or online. Twitter is one of the best ways to get up to date and instant info. Stay informed.</string>
+    <string name="SafetyTip_3_1">Avoid damage to your electronics by putting electronics on higher grounds to possibly save them.</string>
+    <string name="SafetyTip_4_1">Familiarize yourself with your circuit breaker so you can shut it down immediately if the water starts to enter your home.</string>
+    <string name="SafetyTip_5_1">Get all your emergency items like your ID, Passport, money, phone, water and other small necessary items. Be ready to evacuate or leave in a worst case scenario.</string>
+    <string name="SafetyTip_6_1">Find a surfboard, life savers or anything that will float… just in case</string>
+    <string name="SafetyTip_7_1">For standing water, try to do so only while wearing boots high enough to protect you from the water.</string>
 </resources>

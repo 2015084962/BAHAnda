@@ -17,4 +17,65 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--Safety Tips Style-->
+    <style name="CardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">120dp</item>
+    </style>
+
+    <style name="Card_Layout_Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Card_Image">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="Card_Layout_Vertical">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="Card_Title_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Card_Title_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Card_Details_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Card_Details_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- End of ST styles-->
 </resources>

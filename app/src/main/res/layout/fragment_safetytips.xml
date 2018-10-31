@@ -1,14 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".safetytips">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SAFETY TIPS" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="What to do when flood strikes"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="468dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_1"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_1"
+                        android:src="@drawable/text" />
+
+                    <LinearLayout
+                        style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            android:id="@+id/safetyTip_1"
+                            style="@style/Card_Title_1"
+                            android:text="@string/SafetyTip_1" />
+
+                        <TextView
+                            android:id="@+id/safetyTip_1_1"
+                            style="@style/Card_Details_1"
+                            android:text="@string/SafetyTip_2_1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="#d6d7d7"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_2"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_2"
+                        android:src="@drawable/tv" />
+
+                    <LinearLayout
+                        style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            android:id="@+id/safetyTip_2"
+                            style="@style/Card_Title_2"
+                            android:layout_height="77dp"
+                            android:text="@string/SafetyTip_2" />
+
+                        <TextView
+                            android:id="@+id/safetyTip_2_1"
+                            style="@style/Card_Details_2"
+                            android:text="@string/SafetyTip_2_1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_3"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_3"
+                        android:src="@drawable/outlet" />
+
+                    <LinearLayout
+                        style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            android:id="@+id/safetyTip_3"
+                            style="@style/Card_Title_1"
+                            android:text="@string/SafetyTip_3" />
+
+                        <TextView
+                            android:id="@+id/safetyTip_3_1"
+                            style="@style/Card_Details_1"
+                            android:text="@string/SafetyTip_3_1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="#d6d7d7"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_4"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_4"
+                        android:src="@drawable/elec" />
+
+                    <LinearLayout
+                        style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            android:id="@+id/safetyTip_4"
+                            style="@style/Card_Title_2"
+                            android:text="@string/SafetyTip_4" />
+
+                        <TextView
+                            android:id="@+id/safetyTip_4_1"
+                            style="@style/Card_Details_2"
+                            android:text="@string/SafetyTip_4_1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_5"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_5"
+                        android:src="@drawable/backpack" />
+
+                    <LinearLayout
+                        style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            style="@style/Card_Title_1"
+                            android:id="@+id/safetyTip_5"
+                            android:text="@string/SafetyTip_5" />
+
+                        <TextView
+                            style="@style/Card_Details_1"
+                            android:id="@+id/safetyTip_5_1"
+                            android:text="@string/SafetyTip_5_1"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="#d6d7d7"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_6"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_6"
+                        android:src="@drawable/salbabida" />
+
+                    <LinearLayout style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            android:id="@+id/safetyTip_6"
+                            style="@style/Card_Title_2"
+                            android:text="@string/SafetyTip_6" />
+
+                        <TextView
+                            android:id="@+id/safetyTip_6_1"
+                            style="@style/Card_Details_2"
+                            android:text="@string/SafetyTip_6_1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    style="@style/Card_Layout_Horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_safetyTip_7"
+                        style="@style/Card_Image"
+                        android:contentDescription="@string/SafetyTip_7"
+                        android:src="@drawable/boots" />
+
+                    <LinearLayout
+                        style="@style/Card_Layout_Vertical">
+
+                        <TextView
+                            style="@style/Card_Title_1"
+                            android:id="@+id/safetyTip_7"
+                            android:text="@string/SafetyTip_7"
+                            />
+
+                        <TextView
+                            style="@style/Card_Details_1"
+                            android:id="@+id/safetyTip_7_1"
+                            android:text="@string/SafetyTip_7_1"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
