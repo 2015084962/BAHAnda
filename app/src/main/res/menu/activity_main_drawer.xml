@@ -20,10 +20,10 @@
             android:id="@+id/nav_map"
             android:icon="@drawable/menu_map"
             android:title="Map" />
-        <item
-            android:id="@+id/nav_hotlines"
-            android:icon="@drawable/menu_hotline"
-            android:title="Hotlines" />
+        <!--<item-->
+            <!--android:id="@+id/nav_hotlines"-->
+            <!--android:icon="@drawable/menu_hotline"-->
+            <!--android:title="Hotlines" />-->
     </group>
 
 </menu>

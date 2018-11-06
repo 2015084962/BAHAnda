@@ -1,9 +1,11 @@
 package com.cornell.diaz;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -12,7 +14,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
@@ -25,7 +26,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Floating Button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        Drawable srcIcon = getResources().getDrawable(R.drawable.menu_hotline);
+//        Drawable newSrcIcon = srcIcon.getConstantState().newDrawable();
+//        newSrcIcon.mutate().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
+//        fab.setImageDrawable(newSrcIcon);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +40,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //Drawer Layout
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -87,6 +94,7 @@ public class MainActivity extends AppCompatActivity
 //        return true;
 //    }
 
+    //Menu items
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -102,6 +110,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    //Drawer Menu items
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -130,13 +139,13 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.content_frame, mapFragment, "Map");
             fragmentTransaction.commit();
-        } else if (id == R.id.nav_hotlines) {
-            // Handle the hotlines
-            setTitle("Hotlines");
-            hotlines hotlinesFragment = new hotlines();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame, hotlinesFragment, "Do's and Don'ts");
-            fragmentTransaction.commit();
+//        } else if (id == R.id.nav_hotlines) {
+//            // Handle the hotlines
+//            setTitle("Hotlines");
+//            hotlines hotlinesFragment = new hotlines();
+//            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//            fragmentTransaction.replace(R.id.content_frame, hotlinesFragment, "Hotlines");
+//            fragmentTransaction.commit();
         } else if (id == R.id.nav_home) {
             setTitle("Home");
             Home homeFragment = new Home();
