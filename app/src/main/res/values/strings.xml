@@ -7,7 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Drawer -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Flood</string>
     <string name="first_aid">First Aid</string>
@@ -29,4 +29,50 @@
     <string name="SafetyTip_5_1">Get all your emergency items like your ID, Passport, money, phone, water and other small necessary items. Be ready to evacuate or leave in a worst case scenario.</string>
     <string name="SafetyTip_6_1">Find a surfboard, life savers or anything that will float… just in case</string>
     <string name="SafetyTip_7_1">For standing water, try to do so only while wearing boots high enough to protect you from the water.</string>
+    <!--Hotlines Strings-->
+    <string name="hotline">Hotline: </string>
+    <string name="trunkline">Trunkline/s: </string>
+    <string name="opscenter">Operations Center: </string>
+    <string name="disasterunit">Disaster Response Unit: </string>
+    <string name="disastermngt">Disaster Management Office: </string>
+    <string name="directline">Direct Line: </string>
+    <string name="actioncenter">Action Center: </string>
+    <string name="national">National Emergency Hotline</string>
+    <string name="nationalNum">911</string>
+    <string name="ndrrmc">National Disaster And Risk Reduction And Management Council (NDRRMC)</string>
+    <string name="ndrrmcNum">911-5061 to 65</string>
+    <string name="ndrrmcOPS1">(02)911-1406</string>
+    <string name="ndrrmcOPS2">(02)912-2665</string>
+    <string name="ndrrmcOPS3">(02)912-5668</string>
+    <string name="ndrrmcOPS4">(02) 911-1873</string>
+    <string name="redcross">Red Cross</string>
+    <string name="redcrossNum1">143</string>
+    <string name="redcrossNum2">(02) 527-0000</string>
+    <string name="redcrossNum3">(02) 527-8385 to 95</string>
+    <string name="redcrossdismngtNum1">134 (Staff)</string>
+    <string name="redcrossdismngtNum2">132 (Manager)</string>
+    <string name="redcrossdismngtNum3">133 (Radio Room)</string>
+    <string name="pnp">Philippine National Police (PNP)</string>
+    <string name="pnpNum1">117</string>
+    <string name="pnpNum2">722-0650</string>
+    <string name="bfp">Bureau of Fire Protection (NCR)</string>
+    <string name="bfpNum1">(02) 426-0219</string>
+    <string name="bfpNum2">(02) 426-3812</string>
+    <string name="bfpNum3">(02)426-0246</string>
+    <string name="pcg">Philippine Coast Guard</string>
+    <string name="pcgNum">(02) 527-8481 to 89</string>
+    <string name="pcgactionNum">(02) 527-3877</string>
+    <string name="mmda">Metro Manila Development Authority</string>
+    <string name="mmdahotline">136</string>
+    <string name="mmdalocal">loc.</string>
+    <string name="localNum1">337 (rescue)</string>
+    <string name="localNum2">255 (Metrobase)</string>
+    <string name="localNum3">319 (Road Safety)</string>
+    <string name="localNum4">374 (Public Safety)</string>
+    <string name="localNum5">320 (Road Emergency)</string>
+    <string name="localNum6">(02) 882-0925 (Flood Control)</string>
+
+
+
+
 </resources>

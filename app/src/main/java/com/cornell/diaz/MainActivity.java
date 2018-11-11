@@ -1,5 +1,6 @@
 package com.cornell.diaz;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -15,6 +16,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.Window;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,8 +38,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                callHotlines();
             }
         });
 
@@ -157,5 +159,23 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void callHotlines() {
+        final Dialog hotlines_layout = new Dialog(this);
+        hotlines_layout.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        hotlines_layout.setContentView(R.layout.hotline_popup);
+
+        Button ok = (Button)hotlines_layout.findViewById(R.id.ok);
+        ok.setEnabled(true);
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hotlines_layout.cancel();
+            }
+        });
+
+        hotlines_layout.show();
     }
 }
