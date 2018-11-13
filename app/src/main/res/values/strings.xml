@@ -58,7 +58,7 @@
     <string name="bfp">Bureau of Fire Protection (NCR)</string>
     <string name="bfpNum1">(02) 426-0219</string>
     <string name="bfpNum2">(02) 426-3812</string>
-    <string name="bfpNum3">(02)426-0246</string>
+    <string name="bfpNum3">(02) 426-0246</string>
     <string name="pcg">Philippine Coast Guard</string>
     <string name="pcgNum">(02) 527-8481 to 89</string>
     <string name="pcgactionNum">(02) 527-3877</string>
@@ -71,8 +71,12 @@
     <string name="localNum4">374 (Public Safety)</string>
     <string name="localNum5">320 (Road Emergency)</string>
     <string name="localNum6">(02) 882-0925 (Flood Control)</string>
-
-
-
+    <string name="flood_definition">
+        <![CDATA[
+            - the process of inundation or the coverage by water of areas not normally submerged.
+            Inundation is due to water overflowing from streams and other bodies of water
+            as well as by the accumulation of rainwater by drainage.
+        ]]>
+    </string>
 
 </resources>

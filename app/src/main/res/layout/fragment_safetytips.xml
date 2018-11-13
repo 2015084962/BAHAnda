@@ -36,8 +36,7 @@
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="30dp">
 
-                <LinearLayout
-                    style="@style/Card_Layout_Horizontal">
+                <LinearLayout style="@style/Card_Layout_Horizontal">
 
                     <ImageView
                         android:id="@+id/image_safetyTip_1"
@@ -45,8 +44,7 @@
                         android:contentDescription="@string/SafetyTip_1"
                         android:src="@drawable/text" />
 
-                    <LinearLayout
-                        style="@style/Card_Layout_Vertical">
+                    <LinearLayout style="@style/Card_Layout_Vertical">
 
                         <TextView
                             android:id="@+id/safetyTip_1"
