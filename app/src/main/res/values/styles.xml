@@ -78,4 +78,21 @@
         <item name="android:textSize">12sp</item>
     </style>
     <!-- End of ST styles-->
+
+    <!-- Start of FA styles-->
+    <style name="TextView_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/holo_blue_dark</item>
+        <item name="android:textSize">14sp</item>
+
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="TextView_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14dp</item>
+    </style>
 </resources>

@@ -78,6 +78,17 @@
             as well as by the accumulation of rainwater by drainage.
         ]]>
     </string>
-    <string name="first_aid_steps">Before administering care to an ill or injured person, check the scene and the person. Size up the scene and form an initial impression.</string>
+    <string name="first_aid_steps_title">FIRST AID STEPS</string>
+    <string name="first_aid_steps">1. Before administering care to an ill or injured person, check the scene and the person. Size up the scene and form an initial impression.</string>
+    <string name="firstAid1_1">- Pause and looks at the scene and the person before responding</string>
+    <string name="firstAid2">2. If the Person is awake and Responsive and there is no severe life-threatening bleeding:</string>
+    <string name="firstAid2_1">- Obtain consent: Tell the person your name, describes type and level of training, states what you thinks is wrong and what you plans to do, and asks permission to provide care.</string>
+    <string name="firstAid3">3. If the Person Appears Unresponsive:</string>
+    <string name="firstAid3_1">- Shout to get the person’s attention, using the person’s name if it is known. If there is no response, tap the person’s shoulder (if the person is an adult or child) or the bottom of the person’s foot (if the person is an infant) and shout again, while checking for normal breathing. Check for Responsiveness and breathing for no more than 5-10 seconds.</string>
+    <string name="firstAid4">4. If the person is breathing:</string>
+    <string name="firstAid4_1">- Send someone to call 911 or the designated emergency number and obtain an AED and first aid kit.</string>
+    <string name="firstAid5">5. If the person is NOT breathing:</string>
+    <string name="firstAid5_1">- Begin CPR (starting with compressions) or use an AED if one is immediately available.</string>
+
 
 </resources>
