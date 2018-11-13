@@ -141,13 +141,13 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.content_frame, mapFragment, "Map");
             fragmentTransaction.commit();
-//        } else if (id == R.id.nav_hotlines) {
-//            // Handle the hotlines
-//            setTitle("Hotlines");
-//            hotlines hotlinesFragment = new hotlines();
-//            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//            fragmentTransaction.replace(R.id.content_frame, hotlinesFragment, "Hotlines");
-//            fragmentTransaction.commit();
+        } else if (id == R.id.nav_hotlines) {
+            // Handle the hotlines
+            setTitle("Hotlines");
+            hotlines hotlinesFragment = new hotlines();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.content_frame, hotlinesFragment, "Hotlines");
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_home) {
             setTitle("Home");
             Home homeFragment = new Home();
