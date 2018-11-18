@@ -1,14 +1,9 @@
 package com.cornell.diaz;
 
 import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,11 +11,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    DrawerLayout drawer;
+    NavigationView navigationView;
+    Toolbar toolBar = null;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,6 @@ public class MainActivity extends AppCompatActivity
 
         //Floating Button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        Drawable srcIcon = getResources().getDrawable(R.drawable.menu_hotline);
-//        Drawable newSrcIcon = srcIcon.getConstantState().newDrawable();
-//        newSrcIcon.mutate().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
-//        fab.setImageDrawable(newSrcIcon);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,20 +40,14 @@ public class MainActivity extends AppCompatActivity
         });
 
         //Drawer Layout
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_home);
         navigationView.setNavigationItemSelectedListener(this);
-
-        setTitle("Home");
-        Home homeFragment = new Home();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content_frame, homeFragment, "Home");
-        fragmentTransaction.commit();
     }
 
     @Override
@@ -81,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -118,45 +109,29 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        //FragmentManager fragmentManager = getSupportFragmentManager();
-
-        if (id == R.id.nav_safetytips) {
-            // Handle the safetytips
-            setTitle("Safety Tips");
-            safetytips safetytipsFragment = new safetytips();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame, safetytipsFragment, "Safety Tips");
-            fragmentTransaction.commit();
-        } else if (id == R.id.nav_firstaid) {
-            // Handle the map
-            setTitle("First Aid");
-            firstaid firstaidFragment = new firstaid();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame, firstaidFragment, "First Aid");
-            fragmentTransaction.commit();
-        } else if (id == R.id.nav_map) {
-            // Handle the map
-            setTitle("Map");
-            map mapFragment = new map();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame, mapFragment, "Map");
-            fragmentTransaction.commit();
-        } else if (id == R.id.nav_hotlines) {
-            // Handle the hotlines
-            setTitle("Hotlines");
-            hotlines hotlinesFragment = new hotlines();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame, hotlinesFragment, "Hotlines");
-            fragmentTransaction.commit();
-        } else if (id == R.id.nav_home) {
-            setTitle("Home");
-            Home homeFragment = new Home();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.content_frame, homeFragment, "Home");
-            fragmentTransaction.commit();
+        switch (id) {
+            case R.id.nav_home:
+                i = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+            case R.id.nav_firstaid:
+                i = new Intent(MainActivity.this, firstaid_activity.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+            case R.id.nav_safetytips:
+                i = new Intent(MainActivity.this, safetytips_activity.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+            case R.id.nav_map:
+                i = new Intent(MainActivity.this, map_activity.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

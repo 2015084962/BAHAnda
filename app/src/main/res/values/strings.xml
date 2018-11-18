@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">BAHAnda</string>
+    <string name="catchphrase">Maging Handa sa Pagbaha</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 
     <!-- Drawer -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -89,6 +91,9 @@
     <string name="firstAid4_1">- Send someone to call 911 or the designated emergency number and obtain an AED and first aid kit.</string>
     <string name="firstAid5">5. If the person is NOT breathing:</string>
     <string name="firstAid5_1">- Begin CPR (starting with compressions) or use an AED if one is immediately available.</string>
+    <string name="title_activity_safetytips_activity">Safety Tips</string>
+    <string name="title_activity_firstaid_activity">First Aid</string>
+    <string name="title_activity_map_activity">Map</string>
 
 
 </resources>
