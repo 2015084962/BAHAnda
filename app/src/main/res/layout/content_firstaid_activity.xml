@@ -19,27 +19,20 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardCornerRadius="10dp">
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="2dp"
+                android:id="@+id/tvTitleSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="@string/first_aid_steps_title"
+                android:background="@color/colorPrimary"
                 android:textColor="@android:color/white"
-                android:textSize="18sp" />
-        </android.support.v7.widget.CardView>
+                android:textSize="18dp"
+                android:text="@string/first_aid_steps_title" />
 
         <ScrollView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -51,6 +44,18 @@
                 android:layout_marginRight="5dp"
                 android:orientation="vertical"
                 android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvTitleStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"
+                    android:text="@string/first_aid_steps_title" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -101,6 +106,18 @@
                     android:id="@+id/textView12"
                     style="@style/TextView_2"
                     android:text="@string/firstAid5_1" />
+
+                <TextView
+                    android:id="@+id/tvTitleVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"
+                    android:text="@string/video" />
 
                 <fragment
                     android:id="@+id/fragmentyoutubeplayer"

@@ -22,7 +22,7 @@
         android:layout_margin="5dp"
         android:padding="5dp"
         android:text="What to do when flood strikes"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:textStyle="bold" />
 
     <ScrollView
