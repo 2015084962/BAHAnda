@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cornell.diaz.safetytips_activity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="com.cornell.diaz.safetytips_activity">
+    <!--tools:showIn="@layout/app_bar_main">-->
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -21,14 +21,15 @@
         android:layout_gravity="center"
         android:layout_margin="5dp"
         android:padding="5dp"
-        android:text="What to do when flood strikes"
-        android:textSize="18dp"
+        android:text="@string/title_what_to_do"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <ScrollView
-        android:layout_width="382dp"
-        android:layout_height="468dp"
-        android:layout_gravity="center">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,8 +72,7 @@
                 app:cardBackgroundColor="#d6d7d7"
                 app:cardCornerRadius="30dp">
 
-                <LinearLayout
-                    style="@style/Card_Layout_Horizontal">
+                <LinearLayout style="@style/Card_Layout_Horizontal">
 
                     <ImageView
                         android:id="@+id/image_safetyTip_2"
@@ -80,8 +80,7 @@
                         android:contentDescription="@string/SafetyTip_2"
                         android:src="@drawable/tv" />
 
-                    <LinearLayout
-                        style="@style/Card_Layout_Vertical">
+                    <LinearLayout style="@style/Card_Layout_Vertical">
 
                         <TextView
                             android:id="@+id/safetyTip_2"
@@ -105,8 +104,7 @@
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="30dp">
 
-                <LinearLayout
-                    style="@style/Card_Layout_Horizontal">
+                <LinearLayout style="@style/Card_Layout_Horizontal">
 
                     <ImageView
                         android:id="@+id/image_safetyTip_3"
@@ -114,8 +112,7 @@
                         android:contentDescription="@string/SafetyTip_3"
                         android:src="@drawable/outlet" />
 
-                    <LinearLayout
-                        style="@style/Card_Layout_Vertical">
+                    <LinearLayout style="@style/Card_Layout_Vertical">
 
                         <TextView
                             android:id="@+id/safetyTip_3"
@@ -138,8 +135,7 @@
                 app:cardBackgroundColor="#d6d7d7"
                 app:cardCornerRadius="30dp">
 
-                <LinearLayout
-                    style="@style/Card_Layout_Horizontal">
+                <LinearLayout style="@style/Card_Layout_Horizontal">
 
                     <ImageView
                         android:id="@+id/image_safetyTip_4"
@@ -147,8 +143,7 @@
                         android:contentDescription="@string/SafetyTip_4"
                         android:src="@drawable/elec" />
 
-                    <LinearLayout
-                        style="@style/Card_Layout_Vertical">
+                    <LinearLayout style="@style/Card_Layout_Vertical">
 
                         <TextView
                             android:id="@+id/safetyTip_4"
@@ -171,8 +166,7 @@
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="30dp">
 
-                <LinearLayout
-                    style="@style/Card_Layout_Horizontal">
+                <LinearLayout style="@style/Card_Layout_Horizontal">
 
                     <ImageView
                         android:id="@+id/image_safetyTip_5"
@@ -180,19 +174,17 @@
                         android:contentDescription="@string/SafetyTip_5"
                         android:src="@drawable/backpack" />
 
-                    <LinearLayout
-                        style="@style/Card_Layout_Vertical">
+                    <LinearLayout style="@style/Card_Layout_Vertical">
 
                         <TextView
-                            style="@style/Card_Title_1"
                             android:id="@+id/safetyTip_5"
+                            style="@style/Card_Title_1"
                             android:text="@string/SafetyTip_5" />
 
                         <TextView
-                            style="@style/Card_Details_1"
                             android:id="@+id/safetyTip_5_1"
-                            android:text="@string/SafetyTip_5_1"
-                            />
+                            style="@style/Card_Details_1"
+                            android:text="@string/SafetyTip_5_1" />
 
                     </LinearLayout>
 
@@ -236,8 +228,7 @@
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="30dp">
 
-                <LinearLayout
-                    style="@style/Card_Layout_Horizontal">
+                <LinearLayout style="@style/Card_Layout_Horizontal">
 
                     <ImageView
                         android:id="@+id/image_safetyTip_7"
@@ -245,20 +236,17 @@
                         android:contentDescription="@string/SafetyTip_7"
                         android:src="@drawable/boots" />
 
-                    <LinearLayout
-                        style="@style/Card_Layout_Vertical">
+                    <LinearLayout style="@style/Card_Layout_Vertical">
 
                         <TextView
-                            style="@style/Card_Title_1"
                             android:id="@+id/safetyTip_7"
-                            android:text="@string/SafetyTip_7"
-                            />
+                            style="@style/Card_Title_1"
+                            android:text="@string/SafetyTip_7" />
 
                         <TextView
-                            style="@style/Card_Details_1"
                             android:id="@+id/safetyTip_7_1"
-                            android:text="@string/SafetyTip_7_1"
-                            />
+                            style="@style/Card_Details_1"
+                            android:text="@string/SafetyTip_7_1" />
 
                     </LinearLayout>
 

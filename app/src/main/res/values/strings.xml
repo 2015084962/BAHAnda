@@ -95,6 +95,11 @@
     <string name="title_activity_firstaid_activity">First Aid</string>
     <string name="title_activity_map_activity">Map</string>
     <string name="video">Video</string>
+    <string name="title_what_to_do">What to do when flood strikes</string>
+    <string name="image_source">https://www.rappler.com/nation/207501-flooded-areas-metro-manila-july-17-2018</string>
+    <string name="title_safety_tips">SAFETY TIPS</string>
+    <string name="title_flood">FLOOD</string>
+    <string name="see_more">See More</string>
 
 
 </resources>

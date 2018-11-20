@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cornell.diaz.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="com.cornell.diaz.MainActivity">
+    <!--tools:showIn="@layout/app_bar_main"-->
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -13,38 +13,133 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.CardView
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:src="@drawable/baha" />
-
-    </android.support.v7.widget.CardView>
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_blue_light"
+        android:contentDescription="@string/image_source"
+        android:src="@drawable/baha" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:capitalize="characters"
-        android:text="FLOOD"
+        android:text="@string/title_flood"
         android:textColor="@android:color/holo_blue_light" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
 
         android:fontFamily="sans-serif"
-        android:text="@string/flood_definition" />
+        android:text="@string/flood_definition"
+        android:textColor="@android:color/black" />
 
-    <include layout="@layout/content_safetytips_activity" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/title_safety_tips"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_safetyTip_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/SafetyTip_1"
+                android:src="@drawable/text" />
+
+            <TextView
+                android:id="@+id/safetyTip_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:gravity="start|center"
+                android:text="@string/SafetyTip_1"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_safetyTip_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/SafetyTip_2"
+                android:src="@drawable/tv" />
+
+            <TextView
+                android:id="@+id/safetyTip_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="@string/SafetyTip_2"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_safetyTip_3"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/SafetyTip_3"
+                android:src="@drawable/outlet" />
+
+            <TextView
+                android:id="@+id/safetyTip_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="@string/SafetyTip_3"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="goToSafetyTips"
+            android:text="@string/see_more"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!--<include layout="@layout/content_safetytips_activity" />-->
 
 </LinearLayout>

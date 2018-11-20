@@ -153,4 +153,10 @@ public class MainActivity extends AppCompatActivity
 
         hotlines_layout.show();
     }
+
+    public void goToSafetyTips(View v)  {
+        Intent i = new Intent(this, safetytips_activity.class);
+        startActivity(i);
+    }
+
 }
