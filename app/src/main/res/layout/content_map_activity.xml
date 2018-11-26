@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cornell.diaz.map_activity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="com.cornell.diaz.map_activity">
+    <!--tools:showIn="@layout/app_bar_main">-->
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -13,10 +13,60 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <TextView
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:layout_width="217dp"
+        android:layout_height="87dp">
+
+        <RadioButton
+            android:id="@+id/myLocation"
+            android:layout_width="match_parent"
+            android:onClick="rbclick"
+            android:layout_height="8dp"
+            android:layout_weight="1"
+            android:text="@string/myLocation" />
+
+        <RadioButton
+            android:id="@+id/diffLocation"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:onClick="rbclick"
+            android:layout_weight="1"
+            android:text="@string/diffLocation" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/diffloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint1"
+        android:autofillHints="@string/hint1"
+        android:inputType="textPersonName"
+        android:textColorLink="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/diffloc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint2"
+        android:autofillHints="@string/hint2"
+        android:inputType="textPersonName"
+        android:textColorLink="@color/colorPrimary" />
+
+    <Spinner
+        android:id="@+id/establishments"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="MAP" />
+        android:layout_height="40dp" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="287dp" />
 
 
 </LinearLayout>

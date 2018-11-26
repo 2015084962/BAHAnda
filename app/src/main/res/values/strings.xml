@@ -8,6 +8,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="api">AIzaSyC1GhmhXUO60BU5JvnsBMYxyQTjSSAdnlQ</string>
 
     <!-- Drawer -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -100,6 +101,19 @@
     <string name="title_safety_tips">SAFETY TIPS</string>
     <string name="title_flood">FLOOD</string>
     <string name="see_more">See More</string>
+
+    //Map
+    <string name="myLocation">My Location</string>
+    <string name="diffLocation">Different Location</string>
+    <string name="hint1">From</string>
+    <string name="hint2">To</string>
+    <string-array name="establishments">
+        <item>Hospitals</item>
+        <item>Police Stations</item>
+        <item>Fire Departments</item>
+        <item>Evacuation Centers</item>
+    </string-array>
+
 
 
 </resources>

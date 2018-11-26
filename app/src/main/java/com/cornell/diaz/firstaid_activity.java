@@ -23,12 +23,12 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 public class firstaid_activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Constant c = new Constant();
+
     DrawerLayout drawer;
     NavigationView navigationView;
     Toolbar toolBar = null;
     Intent i;
-    private final String key = "AIzaSyAQxE_K0VoUsZXaD5Xm8rwCudBt-attzMg";
-    private final String video_url = "ea1RJUOiNfQ";
     YouTubePlayerFragment playerFragment;
 
     @Override
@@ -58,10 +58,10 @@ public class firstaid_activity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         playerFragment = (YouTubePlayerFragment) getFragmentManager().findFragmentById(R.id.fragmentyoutubeplayer);
-        playerFragment.initialize(key, new YouTubePlayer.OnInitializedListener() {
+        playerFragment.initialize(c.key, new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo(video_url);
+                youTubePlayer.loadVideo(c.video_url);
                 youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
             }
 
@@ -75,20 +75,24 @@ public class firstaid_activity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
+        playerFragment.onStart();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        playerFragment.onResume();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        playerFragment.onStop();
     }
 
     @Override
     protected void onDestroy() {
+        playerFragment.onDestroy();
         super.onDestroy();
     }
 
