@@ -54,7 +54,7 @@ public class map_activity extends AppCompatActivity
     Intent i;
     private RadioGroup rg;
     private RadioButton rb;
-    private EditText edt, edt2;
+    private EditText edt;
     private Spinner spin;
     private GoogleMap map;
     private FusedLocationProviderClient client;
@@ -91,13 +91,9 @@ public class map_activity extends AppCompatActivity
 
         //Text field
         edt = (EditText) findViewById(R.id.diffloc);
-        edt2 = (EditText) findViewById(R.id.diffloc2);
         edt.setEnabled(false);
-        edt2.setEnabled(false);
         edt.setFocusableInTouchMode(false);
-        edt2.setFocusableInTouchMode(false);
         edt.clearFocus();
-        edt2.clearFocus();
 
         //Spinner
         spin = (Spinner) findViewById(R.id.establishments);
@@ -264,20 +260,14 @@ public class map_activity extends AppCompatActivity
 
         if (rb.getId() == R.id.diffLocation) {
             edt.setEnabled(true);
-            edt2.setEnabled(true);
             edt.setFocusableInTouchMode(true);
-            edt2.setFocusableInTouchMode(true);
             edt.requestFocus();
-            edt2.requestFocus();
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.572538, 121.189629), 8f));
         }else {
             getMyLocation();
             edt.setEnabled(false);
-            edt2.setEnabled(false);
             edt.setFocusableInTouchMode(false);
-            edt2.setFocusableInTouchMode(true);
             edt.requestFocus();
-            edt2.requestFocus();
         }
     }
 
