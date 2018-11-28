@@ -108,11 +108,14 @@
     <string name="hint1">From</string>
     <string name="hint2">To</string>
     <string-array name="establishments">
+        <item>Choose Establishment</item>
         <item>Hospitals</item>
         <item>Police Stations</item>
         <item>Fire Departments</item>
         <item>Evacuation Centers</item>
+        <item>MetroAntipolo</item>
     </string-array>
+    <string name="search">Search Google Maps</string>
 
 
 
