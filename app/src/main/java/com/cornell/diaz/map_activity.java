@@ -19,9 +19,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,17 +31,21 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class map_activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {//, OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
@@ -57,11 +63,13 @@ public class map_activity extends AppCompatActivity
 
     private RadioGroup rg;
     private RadioButton rb;
+    private Button openMaps;
     private EditText edt;
     private Spinner spin;
-//    private GoogleMap map;
     private FusedLocationProviderClient client;
     private Location current_location;
+    //    private GoogleMap map;
+    //private LocationRequest mLocationRequests;
 //    private GoogleApiClient mGoogleApiClient;
 //    private GeoDataClient mGeoDataClients;
 //    private PlaceDetectionClient mPlaceDetectionClients;
@@ -132,6 +140,24 @@ public class map_activity extends AppCompatActivity
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        edt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || actionId == EditorInfo.IME_ACTION_DONE) {
+                    openGoogleMaps();
+                }
+                return false;
+            }
+        });
+
+        openMaps = findViewById(R.id.openMap);
+        openMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGoogleMaps();
             }
         });
     }
@@ -283,7 +309,7 @@ public class map_activity extends AppCompatActivity
         }
     }
 
-    public void openGoogleMaps(View v) {
+    public void openGoogleMaps() {
         googleMaps = new Intent(Intent.ACTION_VIEW);
         if (spin != null && spin.getSelectedItem().equals("Choose Establishment")) {
             Toast.makeText(this, "Please select the Location and Establishment.", Toast.LENGTH_SHORT).show();
@@ -292,15 +318,27 @@ public class map_activity extends AppCompatActivity
             if (rb == null) {
                 Toast.makeText(this, "Please select the Location and Establishment.", Toast.LENGTH_SHORT).show();
             } else {
-                lat = current_location.getLatitude();
-                lng = current_location.getLongitude();
                 if (rb.getId() == R.id.myLocation && rb.isChecked()) {
+                    lat = current_location.getLatitude();
+                    lng = current_location.getLongitude();
                     googleMaps.setData(Uri.parse("geo:" + lat + "," + lng + "?q=" + selectedItem));
                     startActivity(googleMaps);
                 } else if (rb.getId() == R.id.diffLocation && rb.isChecked()) {
-                    Toast.makeText(this, "Different Location", Toast.LENGTH_SHORT).show();
-//              googleMaps.setData(Uri.parse("geo:"+lat+","+lng+"?q="+ selectedItem));
-//              startActivity(googleMaps);
+                    Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+                    MarkerOptions marker = new MarkerOptions();
+                    try {
+                        List location = geocoder.getFromLocationName(edt.getText().toString(), 1);
+                        if(location.size() > 0) {
+                            Address diffloc = (Address) location.get(0);
+                            lat = diffloc.getLatitude();
+                            lng = diffloc.getLongitude();
+                            String name = diffloc.getFeatureName();
+                            googleMaps.setData(Uri.parse("geo:" + lat + "," + lng + "?q=" + selectedItem));
+                            startActivity(googleMaps);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
