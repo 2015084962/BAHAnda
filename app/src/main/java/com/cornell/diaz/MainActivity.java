@@ -78,14 +78,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
+    } 
 
     //Menu items
     @Override
@@ -129,6 +122,10 @@ public class MainActivity extends AppCompatActivity
                 i = new Intent(MainActivity.this, map_activity.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+
+            case R.id.nav_hotlines:
+                callHotlines();
                 break;
         }
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

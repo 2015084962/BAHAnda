@@ -75,7 +75,7 @@ public class firstaid_activity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        playerFragment.onStart();
+
     }
 
     @Override
@@ -87,13 +87,13 @@ public class firstaid_activity extends AppCompatActivity
     @Override
     protected void onStop() {
         super.onStop();
-        playerFragment.onStop();
+
     }
 
     @Override
     protected void onDestroy() {
-        playerFragment.onDestroy();
         super.onDestroy();
+
     }
 
     @Override
@@ -105,14 +105,6 @@ public class firstaid_activity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return true;
-//    }
-
     //Menu items
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -155,6 +147,10 @@ public class firstaid_activity extends AppCompatActivity
                 i = new Intent(firstaid_activity.this, map_activity.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+
+            case R.id.nav_hotlines:
+                callHotlines();
                 break;
         }
 

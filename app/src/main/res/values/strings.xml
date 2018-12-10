@@ -17,6 +17,7 @@
     <string name="safety_tips">Safety Tips</string>
     <string name="maps">Maps</string>
     <string name="hotlines">Hotlines</string>
+
     <!--Safety Tips Strings-->
     <string name="SafetyTip_1">Ensure someone always knows where you are</string>
     <string name="SafetyTip_2">Keep up with the news.</string>

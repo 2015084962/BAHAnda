@@ -241,6 +241,10 @@ public class map_activity extends AppCompatActivity
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
                 break;
+
+            case R.id.nav_hotlines:
+                callHotlines();
+                break;
         }
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
