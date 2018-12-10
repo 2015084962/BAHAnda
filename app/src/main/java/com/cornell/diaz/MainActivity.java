@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    } 
+    }
 
     //Menu items
     @Override

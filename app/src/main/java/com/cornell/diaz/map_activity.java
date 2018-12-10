@@ -8,11 +8,13 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -130,7 +132,7 @@ public class map_activity extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 selectedItem = parent.getItemAtPosition(position).toString().trim();
-                if(!selectedItem.equals("Choose Establishment")) {
+                if (!selectedItem.equals("Choose Establishment")) {
                     Log.d(c.LOG_MAPS, "Searching nearby " + selectedItem);
                 } else {
                     Toast.makeText(map_activity.this, "Please choose among the choices.", Toast.LENGTH_LONG);
@@ -146,7 +148,7 @@ public class map_activity extends AppCompatActivity
         edt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || actionId == EditorInfo.IME_ACTION_DONE) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || actionId == EditorInfo.IME_ACTION_DONE) {
                     openGoogleMaps();
                 }
                 return false;
@@ -260,7 +262,6 @@ public class map_activity extends AppCompatActivity
 //    }
 
 
-
     ///////////////////////////////////////////////////////USER DECLARED METHODS///////////////////////////////////////////////////////////////
 
 //    public void autocomplete() {
@@ -277,7 +278,6 @@ public class map_activity extends AppCompatActivity
 //
 //        mPlaceAutoCompleteAdapters = new PlaceAutoCompleteAdapter(this, mGeoDataClients, c.LAT_LNG_BOUNDS, null);
 //    }
-
 
 
     public void callHotlines() {
@@ -305,7 +305,7 @@ public class map_activity extends AppCompatActivity
             edt.setFocusableInTouchMode(true);
             edt.requestFocus();
             //map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(14.572538, 121.189629), 8f));
-        }else {
+        } else {
             getMyLocation();
             edt.setEnabled(false);
             edt.setFocusableInTouchMode(false);
@@ -332,7 +332,7 @@ public class map_activity extends AppCompatActivity
                     MarkerOptions marker = new MarkerOptions();
                     try {
                         List location = geocoder.getFromLocationName(edt.getText().toString(), 1);
-                        if(location.size() > 0) {
+                        if (location.size() > 0) {
                             Address diffloc = (Address) location.get(0);
                             lat = diffloc.getLatitude();
                             lng = diffloc.getLongitude();
@@ -351,15 +351,22 @@ public class map_activity extends AppCompatActivity
     public void getMyLocation() {
         Log.d(c.LOG_MAPS, "Getting current location.");
         client = LocationServices.getFusedLocationProviderClient(this);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return;
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                //Ask for Permission
+                Log.d(c.LOG_MAPS, "Asking Permission");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, c.REQUEST_CODE);
+            }
+        } else {
+            Log.d(c.LOG_MAPS, "Permission Granted.");
         }
         Task location = client.getLastLocation();
         location.addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
-                if(task.isSuccessful()) {
+                if (task.isSuccessful()) {
                     Log.d(c.LOG_MAPS, "Found current location.");
                     current_location = (Location) task.getResult();
 
@@ -372,6 +379,7 @@ public class map_activity extends AppCompatActivity
 
         });
     }
+}
 
 //    //MAP FUNCTIONS!
 //    private void getLocationPermission() {
@@ -523,6 +531,3 @@ public class map_activity extends AppCompatActivity
 ////
 ////        return googlePlaceUrl.toString();
 ////    }
-
-
-}
