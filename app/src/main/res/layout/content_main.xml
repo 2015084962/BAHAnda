@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:contentDescription="http://bagong.pagasa.dost.gov.ph/learning-tools/floods"
         android:text="@string/title_flood"
         android:textColor="@android:color/holo_blue_light" />
 
